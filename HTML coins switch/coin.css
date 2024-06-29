@@ -1,0 +1,31 @@
+.container img{
+    height: 150px;
+    width: 110px;
+
+}
+
+
+.container p{
+    font-size: 17px;
+    color: gray;  
+}
+
+
+.card{
+    height: 250px ;
+    width: 200px;
+    display: inline-block;
+    margin-left: 10px;
+    padding: auto;
+}
+
+
+
+h1{
+    color: gray;
+    padding: 20px;
+}
+
+.container:hover .card:not(:hover) {
+    background-color: orangered;
+    opacity: 0.5; }
