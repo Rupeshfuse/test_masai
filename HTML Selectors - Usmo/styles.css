@@ -1,0 +1,190 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header {
+  background-color: #00000a;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 25px;
+  margin-top: 5px;
+  padding-left: 300px;
+}
+
+body{
+  background-color: #00000a;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+img{
+max-width: 120px;
+max-height: 30px;
+
+}
+button {
+  border:0.1mm;
+  border-color: darkgrey;
+  border-style:solid;
+  color: #fff;
+  background-color: #00000a;
+  border-radius: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+
+
+}
+.b1{
+  padding-top: 2px;
+  width: 70px;
+  height: 40px;
+}
+.b2{
+  width: 110px;
+  height: 40px;
+}
+p{
+  text-align: center;
+  font-size:70px;
+  font-weight: bolder;
+  color: #fff;
+}
+.p2{
+  background: linear-gradient(to right, #00008B, #800080);
+  background-clip: text;
+  color: transparent;
+
+}
+.p3{
+  margin-top: 30px;
+  color: lightgrey;
+  font-size: x-large;
+  font-weight:lighter;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: yellow; 
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 70px; 
+  --card-width: 600px; 
+}
+
+
+
+.div1 {
+  margin-top: 80px;
+  margin-left: 550px;
+}
+
+.input-with-button {
+  position: relative;
+  display: inline-block;
+  width: var(--card-width);
+  height: var(--card-height);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+
+}
+
+
+.input-with-button::before {
+  content: "";
+  width: 612px;
+  height: 75px;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    var(--rotate),
+    #5ddcff, #3c67e3 43%, #4e00c2
+  );
+  position: absolute;
+  z-index: -1;
+  top: -3%;
+  left: -1%;
+  right:-1%;
+  animation: spin 2.5s linear infinite;
+}
+
+
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+.input-with-button input {
+  font-size: 15px;
+  border-style: solid;
+  background-color: #00000a;
+  border: black;
+  border-radius: 10px;
+  padding-right: 90px;
+  width: 600px;
+  height: 70px;
+  padding: 10px;
+}
+
+.input-with-button button {
+  width: 25%;
+  border-radius: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
+  padding: 0 15px;
+  border: none;
+  background-color: rgb(123, 15, 255);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.input-with-button button:hover {
+  opacity: 0.6;
+}
+
+.input-with-button button:not(:hover) {
+  opacity: 1;
+}
