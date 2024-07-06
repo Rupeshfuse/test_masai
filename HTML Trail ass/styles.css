@@ -1,0 +1,30 @@
+body{
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.tabs{
+    display:grid;
+    grid-template-columns: repeat(200px);
+    row-gap: 20px;
+    
+}
+button{
+    background-color: white;
+    border-radius: 5px;
+    border-color:grey;
+    border-style: solid;
+    height:50px;
+    width: 300px;
+    font-weight: bolder;
+}
+img{
+    object-position: left;
+    margin-top: 0px;
+    margin-left: 100px;
+}
