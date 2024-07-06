@@ -1,0 +1,94 @@
+Grid Calculator
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .calculator {
+            text-align: center;
+        }
+        .calculator h1 {
+            margin-bottom: 20px;
+        }
+        .display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            width: 100%;
+            height: 50px;
+            font-size: 24px;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .grid-container button {
+            padding: 20px;
+            font-size: 24px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .grid-container button:hover {
+            background-color: #ddd;
+        }
+        .grid-container .clear {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .grid-container .equal {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .grid-container button.operator {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h1>Masai Calculator</h1>
+        <div class="display" id="display">0</div>
+        <div class="grid-container">
+            <button onclick="updateDisplay('1')">1</button>
+            <button onclick="updateDisplay('2')">2</button>
+            <button onclick="updateDisplay('3')">3</button>
+            <button class="operator" onclick="updateDisplay('+')">+</button>
+            <button onclick="updateDisplay('4')">4</button>
+            <button onclick="updateDisplay('5')">5</button>
+            <button onclick="updateDisplay('6')">6</button>
+            <button class="operator" onclick="updateDisplay('-')">-</button>
+            <button onclick="updateDisplay('7')">7</button>
+            <button onclick="updateDisplay('8')">8</button>
+            <button onclick="updateDisplay('9')">9</button>
+            <button class="operator" onclick="updateDisplay('*')">x</button>
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button onclick="updateDisplay('0')">0</button>
+            <button class="equal" onclick="calculateResult()">=</button>
+            <button class="operator" onclick="updateDisplay('/')">/</button>
+        </div>
+    </div>
+</body>
+</html>
